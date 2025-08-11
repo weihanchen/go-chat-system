@@ -17,7 +17,7 @@ RUN go mod download
 COPY . .
 
 # 建構應用程式
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main ./cmd/server
 
 # 執行階段
 FROM alpine:latest
@@ -35,9 +35,8 @@ WORKDIR /app
 # 從 builder 階段複製二進制檔案
 COPY --from=builder /app/main .
 
-# 複製模板和靜態檔案
-COPY --from=builder /app/templates ./templates
-COPY --from=builder /app/static ./static
+# 複製模板和靜態檔案 - 保持與外部相同的路徑結構
+COPY --from=builder /app/web ./web
 
 # 變更檔案擁有者
 RUN chown -R appuser:appgroup /app

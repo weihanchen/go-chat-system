@@ -32,5 +32,5 @@ README.md
 # Docker 相關
 Dockerfile
 .dockerignore
-docker-compose.yml
-docker-compose.yaml
+docker compose.yml
+docker compose.yaml
