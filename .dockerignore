@@ -1,0 +1,36 @@
+# Git 相關
+.git
+.gitignore
+
+# 編輯器檔案
+.vscode
+.idea
+*.swp
+*.swo
+
+# 系統檔案
+.DS_Store
+Thumbs.db
+
+# 日誌檔案
+*.log
+
+# 測試檔案
+*_test.go
+
+# 建構產物
+bin/
+dist/
+
+# 依賴目錄
+vendor/
+
+# 文檔
+README.md
+*.md
+
+# Docker 相關
+Dockerfile
+.dockerignore
+docker-compose.yml
+docker-compose.yaml

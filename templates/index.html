@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go 聊天系統</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>💬 Go 聊天系統</h1>
+            <div class="stats">
+                <span id="online-count">0</span> 人在線
+                <span id="message-count">0</span> 條訊息
+            </div>
+        </div>
+        
+        <div class="login-section" id="login-section">
+            <div class="login-form">
+                <h2>加入聊天室</h2>
+                <input type="text" id="username-input" placeholder="輸入您的暱稱" maxlength="20">
+                <button onclick="joinChat()">開始聊天</button>
+            </div>
+        </div>
+
+        <div class="chat-section" id="chat-section" style="display: none;">
+            <div class="chat-messages" id="chat-messages"></div>
+            
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="輸入訊息..." maxlength="500">
+                <button onclick="sendMessage()">發送</button>
+            </div>
+        </div>
+
+        <div class="system-info">
+            <p>🚀 使用 Go + WebSocket 建構的即時聊天系統</p>
+            <p>💡 展示後端技能：並發處理、記憶體管理、API 設計</p>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
