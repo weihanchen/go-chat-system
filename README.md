@@ -33,6 +33,10 @@ go mod tidy
 
 ### 運行服務
 ```bash
+# 開發模式
+air -d
+
+# 簡易執行模式
 go run cmd/server/main.go
 ```
 
