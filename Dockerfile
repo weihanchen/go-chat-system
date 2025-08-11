@@ -1,5 +1,5 @@
 # 多階段建構 Dockerfile
-FROM golang:1.21-alpine AS builder
+FROM golang:1.24.5-alpine AS builder
 
 # 設定工作目錄
 WORKDIR /app
